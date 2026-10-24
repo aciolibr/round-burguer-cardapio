@@ -1,0 +1,336 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
+<title>Cardápio Round Burguer</title>
+<meta name="description" content="Hambúrguer artesanal, 100% carne de verdade. Segunda a sábado, das 19h às 23h30, com entrega na porta do seu apê.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Round Burguer">
+<meta property="og:title" content="Cardápio Round Burguer">
+<meta property="og:description" content="Hambúrguer artesanal, 100% carne de verdade. Veja as fotos de cada lanche e peça pelo WhatsApp.">
+<meta property="og:url" content="https://aciolibr.github.io/round-burguer-cardapio/">
+<meta property="og:image" content="https://aciolibr.github.io/round-burguer-cardapio/img/t-melt-1b.jpg">
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="720">
+<link rel="icon" href="img/logo.jpg">
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Lora:wght@400;600&display=swap">
+<style>
+/* Layout: cardápio de lanchonete retrô em uma coluna no celular, duas no computador; faixas quadriculadas separam as seções, como no cardápio impresso */
+:root{
+  --paper:#ffffff;
+  --cream:#f7f1e6;
+  --ink:#16110e;
+  --muted:#6e645b;
+  --red:#ff3131;
+  --red-deep:#d81f1f;
+  --line:#e9e0d2;
+  --display:"Anton","Impact","Arial Narrow",sans-serif;
+  --script:"Lobster","Brush Script MT",cursive;
+  --body:"Lora",Georgia,"Times New Roman",serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+.checker{height:22px;background:
+  repeating-conic-gradient(var(--red) 0 25%, var(--cream) 0 50%) 0 0/22px 22px;}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+header .wrap{padding-block:22px 18px;display:grid;justify-items:center;gap:10px;text-align:center}
+header img{width:min(460px,100%);height:auto;display:block}
+header p{margin:0;color:var(--muted);font-size:15px}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:2px solid var(--ink)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+nav .wrap{display:flex;gap:8px;padding-block:10px;overflow-x:auto}
+nav a{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:15px;color:var(--ink);text-decoration:none;padding:6px 14px;border:2px solid var(--ink);border-radius:999px;white-space:nowrap}
+nav a:hover,nav a:focus-visible{background:var(--ink);color:var(--paper);outline:none}
+
+section{padding-block:28px 34px}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,7vw,44px);line-height:1;margin:0 0 6px;text-transform:uppercase;letter-spacing:.01em;text-wrap:balance}
+.sub{margin:0 0 20px;color:var(--muted);font-style:italic}
+
+.grid{display:grid;grid-template-columns:1fr;gap:22px}
+@media (min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+
+.card{border:2px solid var(--ink);background:var(--paper);display:flex;flex-direction:column;min-width:0}
+.photo{position:relative;display:block;width:100%;padding:0;border:0;border-bottom:2px solid var(--ink);background:var(--cream);cursor:zoom-in;aspect-ratio:1/1;max-width:100%;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.photo:hover img{transform:scale(1.03)}
+.photo:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
+.count{position:absolute;right:10px;bottom:10px;background:rgba(22,17,14,.82);color:#fff;font-family:var(--body);font-size:13px;padding:4px 10px;border-radius:999px}
+.body{padding:16px 16px 18px;display:grid;gap:10px;min-width:0}
+.name{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.02;margin:0;text-wrap:balance}
+.desc{margin:0;color:var(--ink)}
+.prices{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
+.price{display:inline-flex;align-items:center;gap:8px}
+.tag{font-family:var(--script);font-size:26px;line-height:1;color:#fff;background:var(--red);border:2px solid var(--ink);border-radius:999px;padding:6px 16px 8px;transform:rotate(-3deg);box-shadow:2px 2px 0 var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.size{font-family:var(--display);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);line-height:1.15}
+.size b{display:block;color:var(--ink);font-weight:400}
+.note{margin:0;padding-top:10px;border-top:1px dashed var(--line);color:var(--muted);font-size:15px}
+.note strong{color:var(--ink)}
+
+.badge{position:absolute;left:10px;top:10px;background:var(--red);color:#fff;font-family:var(--display);font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border:2px solid var(--ink);box-shadow:2px 2px 0 var(--ink);transform:rotate(-2deg)}
+.upsell{margin:0;background:var(--cream);border-left:4px solid var(--red);padding:8px 12px;font-size:15px}
+.combo-line{margin:0;font-size:14px;color:var(--muted)}
+.combo-line strong{color:var(--ink)}
+.combo-line a{color:var(--red-deep);font-weight:600}
+.wa{display:block;text-align:center;background:var(--ink);color:#fff;text-decoration:none;font-family:var(--display);letter-spacing:.06em;text-transform:uppercase;font-size:17px;padding:12px 16px;border:2px solid var(--ink)}
+.wa:hover,.wa:focus-visible{background:var(--red);outline:none}
+.feature{border:2px solid var(--ink);aspect-ratio:4/3;margin-bottom:16px}
+.feature img{object-position:center 55%}
+.nophoto{aspect-ratio:1/1;max-width:100%;border-bottom:2px solid var(--ink);display:grid;place-content:center;gap:8px;text-align:center;padding:16px;background:repeating-conic-gradient(var(--red) 0 25%, var(--cream) 0 50%) 0 0/44px 44px}
+.nophoto span{font-family:var(--display);font-size:clamp(30px,8vw,44px);line-height:1;background:var(--paper);border:2px solid var(--ink);padding:10px 16px;box-shadow:3px 3px 0 var(--ink)}
+.nophoto small{justify-self:center;background:var(--ink);color:#fff;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px}
+.wa-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.car{position:relative;border-bottom:2px solid var(--ink);background:var(--cream);max-width:100%}
+.car.wide{border:2px solid var(--ink);margin-bottom:16px}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always;padding:0;border:0;background:none;cursor:zoom-in;aspect-ratio:1/1;max-width:100%}
+.car.wide .slide{aspect-ratio:4/3}
+.slide img{width:100%;height:100%;object-fit:cover;display:block}
+.slide:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:2px solid var(--ink);background:rgba(255,255,255,.92);color:var(--ink);font-size:24px;line-height:1;display:grid;place-items:center;cursor:pointer;box-shadow:2px 2px 0 var(--ink);font-family:var(--body);padding:0 0 3px}
+.arrow.prev{left:10px}.arrow.next{right:10px}
+.arrow:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.dots{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:center;gap:6px;pointer-events:none}
+.dots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.7);border:1px solid rgba(22,17,14,.5)}
+.dots span.on{background:var(--red);border-color:var(--ink)}
+.list{display:grid;gap:0;border:2px solid var(--ink)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 16px;border-bottom:1px solid var(--line);min-width:0}
+.row:last-child{border-bottom:0}
+.row .what{min-width:0}
+.row .what b{font-family:var(--body);font-weight:600;display:block}
+.row .what span{color:var(--muted);font-size:14px}
+.row .tag{font-size:22px;padding:5px 14px 7px}
+.group{display:grid;gap:14px}
+.ghead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.ghead h3{font-family:var(--display);font-weight:400;font-size:24px;margin:0;text-transform:uppercase}
+.ghead span{color:var(--muted);font-style:italic;font-size:15px}
+.combos{display:grid;gap:26px}
+@media (min-width:760px){.combos{grid-template-columns:1fr 1fr}}
+.custom{border:2px dashed var(--ink);background:var(--cream);padding:18px 16px;display:grid;gap:8px}
+.custom h3{font-family:var(--display);font-weight:400;font-size:24px;margin:0;text-transform:uppercase}
+.custom p{margin:0}
+.addons{display:grid;gap:14px}
+
+footer{background:var(--ink);color:#fff}
+footer .wrap{padding-block:30px 36px;display:grid;gap:12px}
+footer h2{color:#fff}
+footer p{margin:0;color:#e6ddd2}
+.pending{border:2px dashed var(--red);padding:12px 14px;color:#fff;font-family:var(--body)}
+
+/* álbum */
+.lb{position:fixed;inset:0;z-index:50;background:#0b0907;display:grid;grid-template-rows:auto 1fr auto;padding:calc(env(safe-area-inset-top,0px) + 10px) max(10px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 14px) max(10px,env(safe-area-inset-left,0px))}
+.lb-top{display:flex;justify-content:space-between;align-items:center;color:#fff;gap:10px}
+.lb-title{font-family:var(--display);font-size:22px;letter-spacing:.02em;text-transform:uppercase}
+.lb-stage{display:flex;align-items:center;justify-content:center;min-height:0;position:relative}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;display:block;user-select:none;-webkit-user-drag:none}
+.lb-btn{background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:999px;width:44px;height:44px;font-size:22px;line-height:1;cursor:pointer;display:grid;place-items:center;font-family:var(--body)}
+.lb-btn:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%)}
+.lb-prev{left:4px}.lb-next{right:4px}
+.lb-dots{display:flex;justify-content:center;gap:8px;padding-top:12px}
+.lb-dots span{width:9px;height:9px;border-radius:50%;background:#6d645c}
+.lb-dots span.on{background:var(--red)}
+@media (prefers-reduced-motion:reduce){.photo img{transition:none}.photo:hover img{transform:none}}
+</style>
+
+<div class="checker" aria-hidden="true"></div>
+<header>
+  <div class="wrap">
+    <img src="img/logo.jpg" alt="Round Burguer, burger artesanal" width="920" height="233" fetchpriority="high">
+    <p>Hambúrguer artesanal, 100% carne de verdade. Toque na foto para ver mais.</p>
+    <p><strong style="color:var(--ink)">Segunda a sábado, 19h às 23h30</strong> · entrega na porta do seu apê</p>
+  </div>
+</header>
+
+<nav aria-label="Seções do cardápio">
+  <div class="wrap">
+    <a href="#burgers">Hambúrgueres</a>
+    <a href="#batatas">Batatas</a>
+    <a href="#combos">Combos</a>
+    <a href="#pedir">Como pedir</a>
+  </div>
+</nav>
+
+<main>
+<section id="burgers">
+  <div class="wrap">
+    <h2>Hambúrgueres</h2>
+    <p class="sub">Todos no pão brioche. Smash tem 80g de carne, os Big têm 150g.</p>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<div class="checker" aria-hidden="true"></div>
+
+<section id="batatas">
+  <div class="wrap addons">
+    <h2>Batatas</h2>
+    <button class="photo feature" data-album="batatas" aria-label="Ver foto da batata de verdade">
+      <img src="img/t-batata-2.jpg" alt="Batata de verdade na tábua" loading="lazy" decoding="async" width="720" height="540">
+    </button>
+    <div class="list">
+      <div class="row"><div class="what"><b>Batata de verdade</b><span>Tamanho G</span></div><span class="tag">R$15</span></div>
+      <div class="row"><div class="what"><b>Batata de verdade com cheddar e bacon</b><span>Tamanho G</span></div><span class="tag">R$20</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="checker" aria-hidden="true"></div>
+
+<section id="combos">
+  <div class="wrap">
+    <h2>Combos</h2>
+    <p class="sub">Todo combo vem com batata P para cada hambúrguer.</p>
+    <div id="comboCar"></div>
+    <div class="combos">
+      <div class="group">
+        <div class="ghead"><h3>Individual</h3><span>1 burger + 1 batata P</span></div>
+        <div class="list">
+          <div class="row"><div class="what"><b>Combo Smash Bacon</b></div><span class="tag">R$32</span></div>
+          <div class="row"><div class="what"><b>Combo Big Melt</b></div><span class="tag">R$42</span></div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="ghead"><h3>Casal</h3><span>2 burgers + 2 batatas P</span></div>
+        <div class="list">
+          <div class="row"><div class="what"><b>2 Smash Bacon</b></div><span class="tag">R$62</span></div>
+          <div class="row"><div class="what"><b>1 Smash Bacon + 1 Big Melt</b></div><span class="tag">R$72</span></div>
+          <div class="row"><div class="what"><b>2 Big Melt</b></div><span class="tag">R$82</span></div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="ghead"><h3>Família</h3><span>4 burgers + 4 batatas P</span></div>
+        <div class="list">
+          <div class="row"><div class="what"><b>4 Smash Bacon</b></div><span class="tag">R$120</span></div>
+          <div class="row"><div class="what"><b>2 Smash Bacon + 2 Big Melt</b></div><span class="tag">R$140</span></div>
+        </div>
+      </div>
+      <div class="custom">
+        <h3>Quer outra combinação?</h3>
+        <p>Monte seu combo com qualquer hambúrguer do cardápio. É o valor do hambúrguer mais:</p>
+        <p><strong>+R$5</strong> individual · <strong>+R$8</strong> casal · <strong>+R$12</strong> família</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="pedir">
+  <div class="wrap">
+    <h2>Como pedir</h2>
+    <p>Pedidos pelo WhatsApp: <strong style="color:#fff;user-select:all">(21) 98032-3851</strong></p>
+    <a class="wa" style="background:var(--red);max-width:360px" href="https://wa.me/5521980323851?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    <p><strong style="color:#fff">Segunda a sábado, das 19h às 23h30.</strong></p>
+    <p>Entregamos na porta do seu apê.</p>
+  </div>
+</footer>
+<div class="checker" aria-hidden="true"></div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lbTitle">
+  <div class="lb-top">
+    <span class="lb-title" id="lbTitle"></span>
+    <button class="lb-btn" id="lbClose" aria-label="Fechar">×</button>
+  </div>
+  <div class="lb-stage" id="lbStage">
+    <button class="lb-btn lb-prev" id="lbPrev" aria-label="Foto anterior">‹</button>
+    <img id="lbImg" alt="">
+    <button class="lb-btn lb-next" id="lbNext" aria-label="Próxima foto">›</button>
+  </div>
+  <div class="lb-dots" id="lbDots"></div>
+</div>
+
+<script>
+const WHATSAPP="5521980323851"; // número com DDI e DDD, só dígitos, ex.: 5521999999999
+const BURGERS=[
+ {name:"Big Cheddar Melt",top:true,desc:"Hambúrguer 150g, cheddar melt cremoso, cebola caramelizada e bacon.",
+  prices:[["","150g",37]],fotos:["melt-1b","melt-3","melt-4"],
+  upsell:"<strong>Versão smash 80g:</strong> Cheddar Melt, R$27."},
+ {name:"Edição Especial",desc:"Carne 150g, queijo gorgonzola e geleia de bacon.",
+  prices:[["","150g",42]],fotos:["esp-1","esp-2","esp-3","esp-4"]},
+ {name:"Smash Bacon",desc:"Smash 80g, cheddar fatia, cebola caramelizada, bacon e maionese.",
+  prices:[["Simples","1 carne",27],["Duplo","2 carnes",37]],fotos:["sb-1","sb-2","sb-3","smash-1","smash-2","smash-3"]},
+ {name:"Big Cream",top:true,desc:"Hambúrguer 150g, cream cheese, bacon e geleia de pimenta.",
+  prices:[["","150g",37]],fotos:["cream-2","cream-1","cream-3"],
+  upsell:"<strong>Versão smash 80g:</strong> Smash Bacon Cream, R$27."},
+ {name:"Artesanal Clássico",top:true,desc:"Hambúrguer 150g, 2 fatias de cheddar, cebola caramelizada, bacon e maionese.",
+  prices:[["","150g",34]],fotos:["art-3","art-1","art-2","art-4"]},
+ {name:"Smash Bacon Cream",desc:"Smash 80g, bacon, cream cheese e geleia de pimenta.",
+  prices:[["","smash 80g",27]],fotos:["sbc-1","sbc-2","sbc-4"],
+  upsell:"<strong>Versão 150g:</strong> Big Cream, R$37."},
+ {name:"Cheddar Melt",desc:"Smash 80g, cheddar melt cremoso, cebola caramelizada e bacon.",
+  prices:[["","smash 80g",27]],fotos:[]},
+ {name:"Smash",desc:"Smash 80g, cheddar fatia, cebola caramelizada e maionese.",
+  prices:[["Simples","1 carne",24],["Duplo","2 carnes",32]],fotos:[]},
+];
+const waLink=n=>`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Olá! Quero pedir um '+n+'.')}`;
+function carousel(fotos,key,name,shape,eager,top){
+  const slides=fotos.map((f,k)=>`<button class="slide" data-key="${key}" data-k="${k}" aria-label="Ampliar foto ${k+1} de ${fotos.length} do ${name}">
+      <img src="img/t-${f}.jpg" alt="${name}, foto ${k+1}" loading="${eager&&k===0?'eager':'lazy'}" decoding="async">
+    </button>`).join('');
+  const many=fotos.length>1;
+  return `<div class="car ${shape}">
+    <div class="track">${slides}</div>
+    ${top?`<span class="badge">Mais pedido</span>`:''}
+    ${many?`<button class="arrow prev" aria-label="Foto anterior" hidden>‹</button><button class="arrow next" aria-label="Próxima foto">›</button>
+    <div class="dots">${fotos.map((_,k)=>`<span class="${k?'':'on'}"></span>`).join('')}</div>`:''}
+  </div>`;
+}
+const grid=document.getElementById('grid');
+BURGERS.forEach((b,i)=>{
+  const el=document.createElement('article');el.className='card';
+  const prices=b.prices.map(([s,g,v])=>`<span class="price"><span class="tag">R$${v}</span><span class="size">${s?`<b>${s}</b>`:''}${g}</span></span>`).join('');
+  const media=b.fotos.length?carousel(b.fotos,String(i),b.name,'sq',i<2,b.top):`<div class="nophoto" aria-hidden="true"><span>${b.name}</span><small>Foto em breve</small></div>`;
+  const order=!WHATSAPP?'':(b.prices.length>1
+    ? `<div class="wa-row">${b.prices.map(([s])=>`<a class="wa" href="${waLink(b.name+' '+s.toLowerCase())}" target="_blank" rel="noopener">Pedir ${s.toLowerCase()}</a>`).join('')}</div>`
+    : `<a class="wa" href="${waLink(b.name)}" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>`);
+  el.innerHTML=`${media}
+    <div class="body">
+      <h3 class="name">${b.name}</h3>
+      <p class="desc">${b.desc}</p>
+      <div class="prices">${prices}</div>
+      ${b.upsell?`<p class="upsell">${b.upsell}</p>`:''}
+      ${b.note?`<p class="note">${b.note}</p>`:''}
+      <p class="combo-line"><strong>Vira combo com batata P:</strong> +R$5 no individual, +R$8 no casal, +R$12 no família. <a href="#combos">Ver combos</a></p>
+      ${order}
+    </div>`;
+  grid.appendChild(el);
+});
+
+document.getElementById('comboCar').outerHTML=carousel(["combo-0","combo-1","combo-2","combo-3","combo-4","combo-5","combo-6"],'combos','Combos','wide',false,false);
+document.querySelectorAll('.car').forEach(c=>{
+  const t=c.querySelector('.track'),dots=c.querySelectorAll('.dots span'),p=c.querySelector('.prev'),n=c.querySelector('.next');
+  const count=t.children.length;
+  const at=()=>Math.round(t.scrollLeft/t.clientWidth);
+  const upd=()=>{const k=at();dots.forEach((d,j)=>d.classList.toggle('on',j===k));if(p)p.hidden=k===0;if(n)n.hidden=k>=count-1;};
+  t.addEventListener('scroll',()=>{clearTimeout(t._u);t._u=setTimeout(upd,60);},{passive:true});
+  if(p)p.onclick=()=>t.scrollTo({left:(at()-1)*t.clientWidth,behavior:'smooth'});
+  if(n)n.onclick=()=>t.scrollTo({left:(at()+1)*t.clientWidth,behavior:'smooth'});
+});
+const lb=document.getElementById('lb'),img=document.getElementById('lbImg'),dots=document.getElementById('lbDots'),title=document.getElementById('lbTitle');
+let cur=null,idx=0,last=null;
+function pre(k){const f=cur.fotos;if(f.length<2)return;const p=new Image();p.src=`img/${f[(k+f.length)%f.length]}.jpg`;}
+function show(){const f=cur.fotos;img.src=`img/${f[idx]}.jpg`;pre(idx+1);pre(idx-1);img.alt=`${cur.name}, foto ${idx+1} de ${f.length}`;
+  dots.innerHTML=f.map((_,k)=>`<span class="${k===idx?'on':''}"></span>`).join('');
+  const many=f.length>1;document.getElementById('lbPrev').hidden=!many;document.getElementById('lbNext').hidden=!many;}
+const ALBUMS={batatas:{name:"Batata de verdade",fotos:["batata-2"]},
+  combos:{name:"Combos",fotos:["combo-0","combo-1","combo-2","combo-3","combo-4","combo-5","combo-6"]}};
+function open(i,btn,k){cur=typeof i==='string'?ALBUMS[i]:BURGERS[i];idx=k||0;last=btn;title.textContent=cur.name;show();lb.hidden=false;document.body.style.overflow='hidden';document.getElementById('lbClose').focus();}
+function close(){lb.hidden=true;document.body.style.overflow='';if(last)last.focus();}
+function step(d){if(!cur)return;idx=(idx+d+cur.fotos.length)%cur.fotos.length;show();}
+document.addEventListener('click',e=>{const s=e.target.closest('.slide');if(s){const key=s.dataset.key;open(isNaN(+key)?key:+key,s,+s.dataset.k);return;}const b=e.target.closest('.photo');if(!b)return;b.dataset.album?open(b.dataset.album,b):open(+b.dataset.i,b);});
+document.getElementById('lbClose').onclick=close;
+document.getElementById('lbPrev').onclick=()=>step(-1);
+document.getElementById('lbNext').onclick=()=>step(1);
+lb.addEventListener('click',e=>{if(e.target===lb||e.target.id==='lbStage')close();});
+document.addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);});
+let sx=null;
+lb.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)step(dx<0?1:-1);sx=null;});
+</script>
+
+</body></html>
